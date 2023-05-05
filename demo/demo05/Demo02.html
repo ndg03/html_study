@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的复合选择器</title>
+    <style>
+        /* <!-- 1.后代选择器 --> */
+        /* 把ol里面的 li 选择出来 pink色 */
+        ol li {
+            color: pink;
+        }
+
+        ul li a {
+            color: red;
+        }
+
+        /* 2.儿子选择器 */
+        /* 加了一个> 号，只有亲儿子才会被选择 */
+        .nav>a {
+            color: blue;
+        }
+
+        /* 3.并集选择器 */
+        div,
+        p,
+        li {
+            color: pink;
+        }
+
+        /* 约定的语法规范，我们并集选择器喜欢竖着写 */
+        /* 一定要注意，最后一个选择器，不需要加逗号 */
+
+        /* 4.伪类选择器 */
+        /* 4.1链接伪类选择器 */
+        /* 未访问的链接  a:link */
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* a:visited 选择访问过的链接 */
+        a:visited {
+            color: orange;
+        }
+
+        /* a:hover  选择鼠标经过的链接*/
+        a:hover {
+            color: skyblue;
+        }
+
+        /* a:active 选择鼠标按下的链接 */
+        a:active {
+            color: green;
+        }
+
+        /* lvha  的顺序不可变 */
+
+
+        /* 5. focus 伪类选择器*/
+        /* 把获得光标的input表单元素选取出来 */
+        input:focus {
+            background-color: pink;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是你大锅</li>
+        <li>我是你大锅</li>
+        <li>我是你大锅</li>
+        <li><a href="#">八嘎雅鹿</a></li>
+    </ul>
+    <ol>
+        <li>我是你大爷</li>
+        <li>我是你大爷</li>
+        <li>我是你大爷</li>
+    </ol>
+
+    <div class="nav">
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+
+    <div>熊大</div>
+    <p>熊二</p>
+    <span>喜羊羊</span>
+    <ul>
+        <li>灰太狼</li>
+    </ul>
+
+
+    <a href="#">小猪佩奇</a>
+    <a href="http://www.qq.com">qq</a>
+
+
+    <input type="text">
+    <input type="text">
+    <input type="text">
+</body>
+
+</html>

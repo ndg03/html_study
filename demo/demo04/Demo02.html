@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的引入方式</title>
+    <link rel="stylesheet" href="Demo03.css">
+    <!-- rel 定义当前文档与链接文档之间的关系，在这里需要指定为“stylesheet”,表示被链接的文档是一个样式表文件 -->
+    <style>
+        /* 1.内部样式表  书写方便，权重高*/
+        /* 就是html页面内部写样式，但是是单独写到style标签内部 */
+        p {
+            font-size: 50px;
+        }
+
+        /* 2.行内样式表  部分结构与样式相分离*/
+        /* 在元素标签内部的style属性中设定css样式，适合修改简单样式 */
+        /* 3.外部样式表  实现结构与样式相分离 */
+        /*  */
+    </style>
+</head>
+
+<body>
+    <P>床前明月光</P>
+    <p>疑是地上霜</p>
+    <p>举头望明月</p>
+    <p style="color:pink;font-size: 20px;">低头思故乡</p>
+
+    <div>我是你大锅</div>
+</body>
+
+</html>

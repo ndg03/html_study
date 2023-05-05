@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+
+<body>
+    <h1>1.基本格式 及 相关属性</h1>
+    <!-- <table> 表示表格 
+        <tr> 表示行
+        <td> 表示单元格
+        <th> 表示表头（加粗居中）-->
+    <!-- 这些属性要写到表格标签table里面去 -->
+    <!-- align  对齐
+        border  边框
+        cellpadding 边框与内容的距离
+        cellspacing 边框之间的距离
+        width   宽度
+        hight   高度-->
+    <table align="center" border="1" cellpadding="20" cellspacing="0" width="500" hight="250"><!-- 表格用来展示数据 -->
+        <!-- <thead> 表格的头部  内部必须有 <tr>标签
+            <tbody>  表格的主体-->
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>刘德华</td>
+                <td>男</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>张学友</td>
+                <td>男</td>
+                <td>51</td>
+            </tr>
+            <tr>
+                <td>郭富城</td>
+                <td>男</td>
+                <td>52</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>2.合并单元格</h1>
+    <table align="center" border="1" cellpadding="20" cellspacing="0" width="500" hight="250"><!-- 表格用来展示数据 -->
+        <!-- <thead> 表格的头部  内部必须有 <tr>标签
+            <tbody>  表格的主体-->
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>刘德华</td>
+                <td colspan="2">男</td>
+            <tr>
+                <td rowspan="2">张学友</td>
+                <td>男</td>
+                <td>51</td>
+            </tr>
+            <tr>
+                <td>男</td>
+                <td>52</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- 1.行合并 colspan
+    2.列合并  rowspan-->
+</body>
+
+</html>

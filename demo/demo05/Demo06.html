@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图片</title>
+    <style>
+        body {
+            width: 1000px;
+            height: 1000px;
+            background-image: url(kun.jpg);
+            /* 默认情况是平铺的 */
+            /* background-repeat: repeat; */
+
+            /* 不平铺 */
+            background-repeat: no-repeat;
+
+            /* 沿着x轴平铺 */
+            /* background-repeat: repeat-x; */
+
+            /* 沿着y轴平铺 */
+            /* background-repeat: repeat-y; */
+
+            /* 背景图片会压住背景颜色 */
+            /* background-color: pink; */
+
+
+
+            /* background-position: 方位名词; */
+            /* 如果是方位名词， right center 和center right 效果是等价的，更顺序没有关系 */
+            /* background-position: center top; */
+            /* background-position: center left; */
+
+            /* 此时 水平一定是靠左侧对齐 ，第二个参数是省略y轴  是垂直居中显示的 */
+            /* background-position: left; */
+
+            /* 此时第一个参数一定是top，  y轴顶部对齐 ，第二个参数省略x轴，水平居中显示的 */
+            /* background-position: top; */
+
+
+            /* 参数是精确单位 */
+            /* 20一定是x轴，50一定是y轴 */
+            /* background-position: 20px 50px; */
+            /* 20px是x轴，y轴是默认居中 */
+            /* background-position: 20px; */
+
+
+
+            /* 混合单位 */
+            /* 水平是20  ，y轴是居中 */
+            background-position: 20px center;
+
+            color: red;
+            font-size: 30px;
+            /* 图像固定的 */
+            background-attachment: fixed;
+            /* 默认是滚动的 */
+            /* background-attachment: scroll; */
+        }
+
+        /* 2.背景平铺 */
+
+        /* 3.背景图片的位置 */
+
+
+        /* 背景固定 */
+    </style>
+</head>
+
+<body>
+    <!-- <div></div> -->
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <p>4</p>
+    <p>5</p>
+    <p>6</p>
+    <p>7</p>
+    <p>8</p>
+
+
+    <h1>124集</h1>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS的元素显示模式</title>
+    <style>
+        /* 1.块元素 */
+        /* 比较霸道，独占一行
+            高度宽度，外边距以及内边距都可以控制
+            宽度默认是容器（父级宽度）的100%
+            是一个容器及盒子，里面可以放行内或块级元素 */
+        div {
+            /* width: 200px;  */
+            /* 如果不指定宽度，则和父亲 body 一样宽 ，body是浏览器宽度 */
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 2.行内元素 */
+        /* 1.行内元素在一行上，一行可以显示多个 
+           2.高宽直接设置时无效的
+           3.默认宽度就是他本身内容的宽度
+           4.行内元素只能容纳文本或其他行内元素*/
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 3.行内块元素 */
+        /* 1.一行可以放多个，但是中间会有缝隙
+        2.默认宽度就是它本身内容的宽度
+        3.高度，行高，外边距以及内边距都可以控制 */
+        input {
+            width: 200px;
+            height: 30px;
+            background-color: pink;
+        }
+
+
+        a {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 把行内元素a转换为块级元素 */
+            display: block;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            background: pink;
+            /* 把块级元素转换为行内元素 */
+            display: inline;
+        }
+
+        span {
+            width: 200px;
+            height: 10px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <span></span>
+    <span></span><span></span><span></span>
+    <div>比较霸道独占一行</div>
+    瑟瑟发抖
+    <!-- 文字内元素内不能放 块元素 -->
+    <p>p 主要用于放文字，尤其不能放div</p>
+    <h1>也是文字类块级标签，也不放 其他块级元素</h1>
+
+    <span>nidaguo</span><span>你大锅</span><span>ndg</span>
+    <span>你大锅</span><span>你大锅</span>
+    <!-- 链接里面不能再放链接 -->
+    <!-- a里面可以放块级元素，但是给a转换一下 块级模式最安全 -->
+    <!-- <a href="www.baidu.com">ndg
+        <a href="#">你大锅</a>
+    </a> -->错误写法
+
+
+    <br>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+
+
+    <br>
+    <!-- 元素显示模式转换 -->
+    <a href="#">我是你大锅</a>
+    <a href="#">我是你大锅</a>
+
+    <div>我是块级元素</div>
+    <div>我是块级元素</div>
+
+    <br>
+    <br>
+    <span>把块级元素转换为行内块元素</span>
+    <span>把块级元素转换为行内块元素</span>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+
+<body>
+    <!-- 表单域-->
+    <form action="demo01.html" method="POST" name="name1">
+
+    </form>
+
+    <!--input 表单元素-->
+    <form action="xxx.php" method="get">
+        text 文本框 用户可以在里面输入任何文字
+        <br>
+        用户名：
+        <input type="text" name="suername" value="请输入用户名" maxlength="10">
+        <br>
+        password 密码框，用户看不见输入的内容
+        <br>
+        密码:
+        <input type="password" name="pwd" value="123" maxlength="10">
+        <br>
+        radio 是单选按钮，可以实现多选一
+        <br>
+        name是表单元素的名字，这里的性别单选按钮必须有相同的名字name，才能实现多选一
+        <br>
+        单选框和复选框可以设置checked 属性，当页面打开的时候可以默认选中这个按钮
+        性别：男
+        <input type="radio" name="sex" value="男" checked="checked">
+        女
+        <input type="radio" name="sex" value="女"> <br>
+        checkbox 是一个多选框
+        <br>
+        爱好：吃饭
+        <input type="checkbox" name="hobby">
+        睡觉
+        <input type="checkbox" name="hobby">
+        csgo
+        <input type="checkbox" name="hobby" checked="checked"> <br>
+        <br>
+        点击了提交按钮，可以把form里卖弄的表单元素 里面的值 提交给后台服务器
+        <br>
+        <input type="submit" value="注册">
+        重置按钮可以还原表单元素的默认状态
+        <br>
+        <input type="reset" value="重置">
+        <br>
+        普通按钮 button 后期结合js 搭配使用
+        <br>
+        <input type="button" value="获取短信验证码">
+        文件域 使用场景 上传文件使用的
+        <br>
+        上传头像 ：
+        <input type="file">
+    </form>
+
+    <!-- lable  标签 -->
+    <label for="text">用户名：</label>
+    <input type="text" id="text">
+    <br>
+    <input type="radio" id="nan" name="sex">
+    <label for="nan">男</label>
+    <br>
+    <input type="radio" id="nv" name="sex">
+    <label for="nv">女</label>
+    <br>
+    <!-- select 表单元素 -->
+    籍贯：
+    <select>
+        <option>北京</option>
+        <option>天津</option>
+        <option>上海</option>
+        <option selected="selected">成都</option>
+    </select>
+    <!-- textarea  表单元素 -->
+    <form>
+        今日反馈：
+        <textarea cols="50" rows="5">  5行
+            我是你大锅
+        </textarea>
+    </form>
+
+</body>
+
+</html>
